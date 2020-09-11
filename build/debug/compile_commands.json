@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/Code/C/demo/build/debug",
+  "command": "D:\\Code\\software\\mingw64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp  -O0 -Wall -g2 -ggdb -o CMakeFiles\\main.dir\\src\\main.cc.obj -c D:\\Code\\C\\demo\\src\\main.cc",
+  "file": "D:/Code/C/demo/src/main.cc"
+}
+]

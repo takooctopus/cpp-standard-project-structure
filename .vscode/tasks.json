@@ -1,0 +1,48 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            "label": "cmake",
+            "options": {
+                "cwd": "${workspaceFolder}/build/debug"
+            },
+            "type": "shell",
+            "command": "cmake --no-warn-unused-cli -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE -DCMAKE_BUILD_TYPE:STRING=Debug -H${workspaceFolder} -B${workspaceFolder}/build/debug -G 'MinGW Makefiles'",           
+		},
+        {
+            "label": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build/debug"
+            },
+            "type": "shell",
+            "command": "cmake --build ${workspaceFolder}/build/debug --config Debug --target all -- -j 14",
+           // "showOutput":"always",
+          
+            "dependsOn": [
+                "cmake"
+            ],
+        },
+		// {
+		// 	"type": "shell",
+		// 	"label": "C/C++: g++.exe build active file",
+		// 	"command": "D:/Code/software/mingw64/bin/g++.exe",
+		// 	"args": [
+		// 		"-g",
+		// 		"${file}",
+		// 		"-o",
+		// 		// "${fileDirname}\\${fileBasenameNoExtension}.exe"
+		// 		"${workspaceFolder}/build/release/${fileBasenameNoExtension}.exe"
+		// 	],
+		// 	"options": {
+		// 		"cwd": "D:/Code/software/mingw64/bin"
+		// 	},
+		// 	"problemMatcher": [
+		// 		"$gcc"
+		// 	],
+		// 	"group": {
+		// 		"kind": "build",
+		// 		"isDefault": true
+		// 	}
+		// }
+	]
+}
