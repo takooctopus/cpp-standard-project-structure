@@ -71,7 +71,6 @@ CMAKE_BINARY_DIR = D:\Code\C\demo\build\debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main.dir/all
 all: src/all
 
 .PHONY : all
@@ -82,7 +81,6 @@ preinstall: src/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main.dir/clean
 clean: src/clean
 
 .PHONY : clean
@@ -91,46 +89,142 @@ clean: src/clean
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
-src/all:
+src/all: src/CMakeFiles/main.dir/all
+src/all: src/Interfaces/all
+src/all: src/Controllers/all
 
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
-src/preinstall:
+src/preinstall: src/Interfaces/preinstall
+src/preinstall: src/Controllers/preinstall
 
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
-src/clean:
+src/clean: src/CMakeFiles/main.dir/clean
+src/clean: src/Interfaces/clean
+src/clean: src/Controllers/clean
 
 .PHONY : src/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Directory level rules for directory src/Controllers
+
+# Recursive "all" directory target.
+src/Controllers/all: src/Controllers/CMakeFiles/CONTROLLERS.dir/all
+
+.PHONY : src/Controllers/all
+
+# Recursive "preinstall" directory target.
+src/Controllers/preinstall:
+
+.PHONY : src/Controllers/preinstall
+
+# Recursive "clean" directory target.
+src/Controllers/clean: src/Controllers/CMakeFiles/CONTROLLERS.dir/clean
+
+.PHONY : src/Controllers/clean
+
+#=============================================================================
+# Directory level rules for directory src/Interfaces
+
+# Recursive "all" directory target.
+src/Interfaces/all: src/Interfaces/CMakeFiles/INTERFACES.dir/all
+
+.PHONY : src/Interfaces/all
+
+# Recursive "preinstall" directory target.
+src/Interfaces/preinstall:
+
+.PHONY : src/Interfaces/preinstall
+
+# Recursive "clean" directory target.
+src/Interfaces/clean: src/Interfaces/CMakeFiles/INTERFACES.dir/clean
+
+.PHONY : src/Interfaces/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/main.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Code\C\demo\build\debug\CMakeFiles --progress-num=1,2 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+src/CMakeFiles/main.dir/all: src/Interfaces/CMakeFiles/INTERFACES.dir/all
+src/CMakeFiles/main.dir/all: src/Controllers/CMakeFiles/CONTROLLERS.dir/all
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\main.dir\build.make src/CMakeFiles/main.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\main.dir\build.make src/CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Code\C\demo\build\debug\CMakeFiles --progress-num=5,6 "Built target main"
+.PHONY : src/CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\C\demo\build\debug\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
+src/CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\C\demo\build\debug\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\C\demo\build\debug\CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : src/CMakeFiles/main.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
+main: src/CMakeFiles/main.dir/rule
 
 .PHONY : main
 
 # clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+src/CMakeFiles/main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\main.dir\build.make src/CMakeFiles/main.dir/clean
+.PHONY : src/CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target src/Interfaces/CMakeFiles/INTERFACES.dir
+
+# All Build rule for target.
+src/Interfaces/CMakeFiles/INTERFACES.dir/all:
+	$(MAKE) $(MAKESILENT) -f src\Interfaces\CMakeFiles\INTERFACES.dir\build.make src/Interfaces/CMakeFiles/INTERFACES.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\Interfaces\CMakeFiles\INTERFACES.dir\build.make src/Interfaces/CMakeFiles/INTERFACES.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Code\C\demo\build\debug\CMakeFiles --progress-num=3,4 "Built target INTERFACES"
+.PHONY : src/Interfaces/CMakeFiles/INTERFACES.dir/all
+
+# Build rule for subdir invocation for target.
+src/Interfaces/CMakeFiles/INTERFACES.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\C\demo\build\debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Interfaces/CMakeFiles/INTERFACES.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\C\demo\build\debug\CMakeFiles 0
+.PHONY : src/Interfaces/CMakeFiles/INTERFACES.dir/rule
+
+# Convenience name for target.
+INTERFACES: src/Interfaces/CMakeFiles/INTERFACES.dir/rule
+
+.PHONY : INTERFACES
+
+# clean rule for target.
+src/Interfaces/CMakeFiles/INTERFACES.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\Interfaces\CMakeFiles\INTERFACES.dir\build.make src/Interfaces/CMakeFiles/INTERFACES.dir/clean
+.PHONY : src/Interfaces/CMakeFiles/INTERFACES.dir/clean
+
+#=============================================================================
+# Target rules for target src/Controllers/CMakeFiles/CONTROLLERS.dir
+
+# All Build rule for target.
+src/Controllers/CMakeFiles/CONTROLLERS.dir/all:
+	$(MAKE) $(MAKESILENT) -f src\Controllers\CMakeFiles\CONTROLLERS.dir\build.make src/Controllers/CMakeFiles/CONTROLLERS.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\Controllers\CMakeFiles\CONTROLLERS.dir\build.make src/Controllers/CMakeFiles/CONTROLLERS.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Code\C\demo\build\debug\CMakeFiles --progress-num=1,2 "Built target CONTROLLERS"
+.PHONY : src/Controllers/CMakeFiles/CONTROLLERS.dir/all
+
+# Build rule for subdir invocation for target.
+src/Controllers/CMakeFiles/CONTROLLERS.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\C\demo\build\debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/Controllers/CMakeFiles/CONTROLLERS.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\C\demo\build\debug\CMakeFiles 0
+.PHONY : src/Controllers/CMakeFiles/CONTROLLERS.dir/rule
+
+# Convenience name for target.
+CONTROLLERS: src/Controllers/CMakeFiles/CONTROLLERS.dir/rule
+
+.PHONY : CONTROLLERS
+
+# clean rule for target.
+src/Controllers/CMakeFiles/CONTROLLERS.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\Controllers\CMakeFiles\CONTROLLERS.dir\build.make src/Controllers/CMakeFiles/CONTROLLERS.dir/clean
+.PHONY : src/Controllers/CMakeFiles/CONTROLLERS.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

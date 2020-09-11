@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/src/Controllers/HomeController.h
+src/Interfaces/ControllerInterface.h
+../../include/src/Controllers/src/Interfaces/ControllerInterface.h
+
+../../include/src/Interfaces/ControllerInterface.h
+
+D:/Code/C/demo/src/Controllers/HomeController.cc
+src/Controllers/HomeController.h
+D:/Code/C/demo/src/Controllers/src/Controllers/HomeController.h
+iostream
+-
+src/Interfaces/ControllerInterface.h
+D:/Code/C/demo/src/Controllers/src/Interfaces/ControllerInterface.h
+

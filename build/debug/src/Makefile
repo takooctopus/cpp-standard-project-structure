@@ -128,6 +128,48 @@ depend:
 	cd /d D:\Code\C\demo\build\debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/CMakeFiles/main.dir/rule:
+	cd /d D:\Code\C\demo\build\debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/main.dir/rule
+.PHONY : src/CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: src/CMakeFiles/main.dir/rule
+
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	cd /d D:\Code\C\demo\build\debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\main.dir\build.make src/CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+main.obj: main.cc.obj
+
+.PHONY : main.obj
+
+# target to build an object file
+main.cc.obj:
+	cd /d D:\Code\C\demo\build\debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\main.dir\build.make src/CMakeFiles/main.dir/main.cc.obj
+.PHONY : main.cc.obj
+
+main.i: main.cc.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cc.i:
+	cd /d D:\Code\C\demo\build\debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\main.dir\build.make src/CMakeFiles/main.dir/main.cc.i
+.PHONY : main.cc.i
+
+main.s: main.cc.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cc.s:
+	cd /d D:\Code\C\demo\build\debug && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\main.dir\build.make src/CMakeFiles/main.dir/main.cc.s
+.PHONY : main.cc.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -136,6 +178,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... main
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

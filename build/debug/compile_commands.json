@@ -1,7 +1,17 @@
 [
 {
-  "directory": "D:/Code/C/demo/build/debug",
-  "command": "D:\\Code\\software\\mingw64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp  -O0 -Wall -g2 -ggdb -o CMakeFiles\\main.dir\\src\\main.cc.obj -c D:\\Code\\C\\demo\\src\\main.cc",
+  "directory": "D:/Code/C/demo/build/debug/src",
+  "command": "D:\\Code\\software\\mingw64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp  -O0 -Wall -g2 -ggdb -o CMakeFiles\\main.dir\\main.cc.obj -c D:\\Code\\C\\demo\\src\\main.cc",
   "file": "D:/Code/C/demo/src/main.cc"
+},
+{
+  "directory": "D:/Code/C/demo/build/debug/src/Interfaces",
+  "command": "D:\\Code\\software\\mingw64\\bin\\g++.exe  @CMakeFiles/INTERFACES.dir/includes_CXX.rsp  -O0 -Wall -g2 -ggdb -o CMakeFiles\\INTERFACES.dir\\ControllerInterface.cc.obj -c D:\\Code\\C\\demo\\src\\Interfaces\\ControllerInterface.cc",
+  "file": "D:/Code/C/demo/src/Interfaces/ControllerInterface.cc"
+},
+{
+  "directory": "D:/Code/C/demo/build/debug/src/Controllers",
+  "command": "D:\\Code\\software\\mingw64\\bin\\g++.exe  @CMakeFiles/CONTROLLERS.dir/includes_CXX.rsp  -O0 -Wall -g2 -ggdb -o CMakeFiles\\CONTROLLERS.dir\\HomeController.cc.obj -c D:\\Code\\C\\demo\\src\\Controllers\\HomeController.cc",
+  "file": "D:/Code/C/demo/src/Controllers/HomeController.cc"
 }
 ]

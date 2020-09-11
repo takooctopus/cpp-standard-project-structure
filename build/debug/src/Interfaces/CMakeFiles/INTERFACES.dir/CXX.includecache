@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/src/Interfaces/ControllerInterface.h
+
+D:/Code/C/demo/src/Interfaces/ControllerInterface.cc
+src/Interfaces/ControllerInterface.h
+D:/Code/C/demo/src/Interfaces/src/Interfaces/ControllerInterface.h
+iostream
+-
+

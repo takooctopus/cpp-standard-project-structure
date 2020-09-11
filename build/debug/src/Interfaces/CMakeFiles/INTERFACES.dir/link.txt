@@ -1,0 +1,2 @@
+D:\Code\software\mingw64\bin\ar.exe qc ..\..\..\lib\libINTERFACES.a CMakeFiles/INTERFACES.dir/ControllerInterface.cc.obj
+D:\Code\software\mingw64\bin\ranlib.exe ..\..\..\lib\libINTERFACES.a

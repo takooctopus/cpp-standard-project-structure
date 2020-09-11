@@ -138,35 +138,34 @@ main: cmake_check_build_system
 
 # fast build rule for target.
 main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\main.dir\build.make src/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/main.obj: src/main.cc.obj
+#=============================================================================
+# Target rules for targets named INTERFACES
 
-.PHONY : src/main.obj
+# Build rule for target.
+INTERFACES: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 INTERFACES
+.PHONY : INTERFACES
 
-# target to build an object file
-src/main.cc.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cc.obj
-.PHONY : src/main.cc.obj
+# fast build rule for target.
+INTERFACES/fast:
+	$(MAKE) $(MAKESILENT) -f src\Interfaces\CMakeFiles\INTERFACES.dir\build.make src/Interfaces/CMakeFiles/INTERFACES.dir/build
+.PHONY : INTERFACES/fast
 
-src/main.i: src/main.cc.i
+#=============================================================================
+# Target rules for targets named CONTROLLERS
 
-.PHONY : src/main.i
+# Build rule for target.
+CONTROLLERS: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CONTROLLERS
+.PHONY : CONTROLLERS
 
-# target to preprocess a source file
-src/main.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cc.i
-.PHONY : src/main.cc.i
-
-src/main.s: src/main.cc.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/src/main.cc.s
-.PHONY : src/main.cc.s
+# fast build rule for target.
+CONTROLLERS/fast:
+	$(MAKE) $(MAKESILENT) -f src\Controllers\CMakeFiles\CONTROLLERS.dir\build.make src/Controllers/CMakeFiles/CONTROLLERS.dir/build
+.PHONY : CONTROLLERS/fast
 
 # Help Target
 help:
@@ -176,10 +175,9 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... CONTROLLERS
+	@echo ... INTERFACES
 	@echo ... main
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
 .PHONY : help
 
 

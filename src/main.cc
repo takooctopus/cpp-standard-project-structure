@@ -1,7 +1,15 @@
+#include "src/main.h"
 #include <iostream>
-using namespace std;
+#include "src/Interfaces/ControllerInterface.h"
+#include "src/Controllers/HomeController.h"
 
-int main()
+
+int main(int argc, const char *argv[])
 {
-  printf("%s","hello world");  
+    printf("%s","hello world\n");
+    ControllerInterface a;
+    a.test();
+    HomeController b;
+    b.test();
+    printf("%s","QUITE\n");
 }

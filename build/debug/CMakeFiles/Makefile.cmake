@@ -14,6 +14,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../../cmake/messagecolor.cmake"
   "../../cmake/utils.cmake"
   "../../src/CMakeLists.txt"
+  "../../src/Controllers/CMakeLists.txt"
+  "../../src/Interfaces/CMakeLists.txt"
   "D:/Code/software/cmake/share/cmake-3.18/Modules/CMakeCXXInformation.cmake"
   "D:/Code/software/cmake/share/cmake-3.18/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "D:/Code/software/cmake/share/cmake-3.18/Modules/CMakeCommonLanguageInclude.cmake"
@@ -45,9 +47,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Interfaces/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Controllers/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/main.dir/DependInfo.cmake"
+  "src/CMakeFiles/main.dir/DependInfo.cmake"
+  "src/Interfaces/CMakeFiles/INTERFACES.dir/DependInfo.cmake"
+  "src/Controllers/CMakeFiles/CONTROLLERS.dir/DependInfo.cmake"
   )

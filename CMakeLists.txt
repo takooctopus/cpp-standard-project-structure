@@ -1,27 +1,24 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.4)
+cmake_minimum_required(VERSION 3.12)
                                              
 #--------------------------------------------                                   
 # Project setting
 
 #--------------------------------------------                                   
-INCLUDE(cmake/utils.cmake)  
-INCLUDE(cmake/messagecolor.cmake)
+include(cmake/utils.cmake)  
+include(cmake/messagecolor.cmake)
 
 HELLO_APP_EXTRACT_VERSION()        
 
 
-PROJECT(tako_demo VERSION ${HELLO_APP_VERSION} LANGUAGES CXX)                    
+project(demo VERSION ${HELLO_APP_VERSION} LANGUAGES CXX)                    
 
-MESSAGE(INFO "--------------------------------")     
+message(INFO "--------------------------------")     
 
-MESSAGE(STATUS "Build TAKO_DEMO: ${HELLO_APP_VERSION}")
+message(STATUS "Build TAKO_DEMO: ${HELLO_APP_VERSION}")
 
 message(STATUS "顶层目录的CMAKELIST")
 
-
-#只需在顶层CMakeListst.txt 加上如下两句话，就会自动执行子目录下的CMakeLists.txt
-add_subdirectory(${PROJECT_SOURCE_DIR}/src)
-include_directories(${PROJECT_BINARY_DIR}/bin)
+message(STATUS ${PROJECT_SOURCE_DIR})
 
 
 # 开启调试信息
@@ -29,9 +26,11 @@ set(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")
 set(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3 -Wall")
 
+SET(PROJECT_ROOT_PATH "${PROJECT_SOURCE_DIR}")
+message(STATUS ${PROJECT_ROOT_PATH})
+SET(EXECUTABLE_OUTPUT_PATH "${PROJECT_ROOT_PATH}/build/bin/")
+SET(LIBRARY_OUTPUT_PATH "${PROJECT_ROOT_PATH}/build/lib/")
+INCLUDE_DIRECTORIES("${PROJECT_ROOT_PATH}/include/") 
+LINK_DIRECTORIES("${CMAKE_SOURCE_DIR}/lib/") 
 
-# 开启所有警告
-# set(CMAKE_CXX_FLAGS "-Wall")
-
-SET( tako_SRCS ${PROJECT_SOURCE_DIR}/src/main.cc )
-ADD_EXECUTABLE( main ${tako_SRCS} )
+add_subdirectory(src)
